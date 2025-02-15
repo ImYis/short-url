@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>短链接生成器</title>
+    <link rel="stylesheet" href="https://unpkg.com/@primer/css@^20.0.0/dist/primer.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="color-bg-default">
+    <div class="container-lg p-4">
+        <div class="Box mt-5 animate-fade-in">
+            <div class="Box-header">
+                <h3 class="Box-title">
+                    <svg height="32" aria-hidden="true" viewBox="0 0 16 16" class="octicon octicon-link">
+                        <path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0..."></path>
+                    </svg>
+                    生成短链接
+                </h3>
+            </div>
+            <div class="Box-body">
+                <div class="form-group">
+                    <input type="url" id="originalUrl" class="form-control" 
+                           placeholder="https://example.com" autofocus>
+                </div>
+                <button class="btn btn-primary btn-block" onclick="generateLink()">
+                    <span class="animate-spin" id="spinner" style="display:none">↻</span>
+                    生成
+                </button>
+            </div>
+            <div id="result" class="Box-footer hidden"></div>
+        </div>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>
